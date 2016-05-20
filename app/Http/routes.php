@@ -23,14 +23,14 @@
 
 
 //后台路由
-Route::get("admin/","Admin\Controller@index");
+Route::get("/admin/","Admin\Controller@index");
+Route::get("/",function(){
+	return 11111111;
+});
 // Route::get("admin/{id}",function($id){
 // 	return $id;
 // });
 Route::get("admin/menu","Admin\MenuController@index");
-Route::match(['get', 'post'], '/', function () {
-    return 'Hello World';
-});
 //Route::get("foo",['uses'=>'fooController@method','as'=>'name']);
 // Route::get("profile",['middleware'=>'auth','uses'=>'UserController@showProfile']);
 
