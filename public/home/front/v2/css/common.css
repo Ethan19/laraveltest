@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+body,ul,li,ol,li,dl,dt,dd,p,a,h1,h2,h3,h4,h5,h6,img ,input,select 
+{ 
+    margin:0; padding:0;
+}
+img
+{
+    border:0;
+}
+body 
+{
+    font: normal 14px "微软雅黑","Micrsoft YaHei", "宋体",Arial, Helvetica, Tahoma ,sans-serif ;
+}
+.mt5  { margin-top:5px;}  .mb5  { margin-bottom:5px;}   .mr5  { margin-right:5px;} .ml5  { margin-left:5px ;} 
+.mt10 { margin-top:10px;} .mb10 { margin-bottom:10px;} .mr10 { margin-right:10px;} .ml10 { margin-left:10px ;} 
+.mt20 { margin-top:20px;} .mb20 { margin-bottom:20px;} .mr20 { margin-right:20px;} .ml20 { margin-left:20px ;} 
+.mt30 { margin-top:30px;} .mb30 { margin-bottom:30px;} .mr30 { margin-right:30px;} .ml30 { margin-left:30px ;} 
+.mt40 { margin-top:40px;} .mb40 { margin-bottom:40px;} .mr40 { margin-right:40px;} .ml40 { margin-left:40px ;} 
+.mt50 { margin-top:50px;} .mb50 { margin-bottom:50px;} .mr50 { margin-right:50px;} .ml50 { margin-left:50px ;} 
+
+.pt5  { padding-top:5px;}  .pb5  { padding-bottom:5px;}  .pr5  { padding-right:5px;}  .pl5  { padding-left:5px ;} 
+.pt10 { padding-top:10px;} .pb10 { padding-bottom:10px;} .pr10 { padding-right:10px;} .pl10 { padding-left:10px ;} 
+.pt20 { padding-top:20px;} .pb20 { padding-bottom:20px;} .pr20 { padding-right:20px;} .pl20 { padding-left:20px ;} 
+.pt30 { padding-top:30px;} .pb30 { padding-bottom:30px;} .pr30 { padding-right:30px;} .pl30 { padding-left:30px ;} 
+.pt40 { padding-top:40px;} .pb40 { padding-bottom:40px;} .pr40 { padding-right:40px;} .pl40 { padding-left:40px ;}
+.pt50 { padding-top:50px;} .pb50 { padding-bottom:50px;} .pr50 { padding-right:50px;} .pl50 { padding-left:50px ;}
+
+ul,ol,dl
+{
+	overflow: hidden;
+}
+ul li,ol li 
+{
+	list-style: none;
+}
+a 
+{
+	text-decoration: none;
+}
+em
+{
+	font-style: normal;
+}
+.fr
+{
+	float: right;
+}
+.fl
+{
+	float: left;
+}
+.tr 
+{
+	text-align: right;
+}
+.tl 
+{
+	text-align: left;
+}
+.block
+{
+	display: block;
+}
+.none 
+{
+	display:none;
+}
+/****************** clearfix float ********************/
+.clearfix:after 
+{
+    content: "\200B"; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+}
+.clearfix 
+{
+	*zoom:1;
+}
+/************* background color ***********/
+.bg_mask 
+{
+	background: #000;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0.3;
+    fliter:alpha(opacity=30);
+    z-index:998;
+}
+.bg_orange
+ {
+	background: orange;
+}
+.bg_green 
+{
+	background: green;
+}
+.bg_blue 
+{
+	background: blue;
+}
+.bg_red 
+{
+	background: red;
+}
+.bg_white
+{
+	background: white;
+}
+/************* font color ***********/
+.c_orange 
+{
+	color:orange;
+}
+.c_green 
+{
+	color:green;
+}
+.c_blue 
+{
+	color:blue;
+}
+.c_red 
+{
+	color:red;
+}
+.c_white
+{
+	color:white;
+}
+.c_grey
+{
+	color:#999999;
+}
+.c_yellow
+{
+	color:orange;
+}
+/************* button style ***********/
+.btn
+{
+	border-radius:5px; 
+	font-size: .9375em;
+	display: block;
+	text-align: center;
+	height:40px;
+	line-height: 40px;
+}
+.btn_primary
+{
+	background: #1a9ff3;
+}
+.btn_primary:hover
+{
+	background: #23a9fe;
+	border:1px solid #1398ed;
+	outline: 0 none;
+}
+.btn_primary:active
+{
+	background: #0a8fe4;
+	border:1px solid #047fcc;
+	outline: 0 none;
+}
+.btn_default
+{
+	border:1px solid #1ea6df;
+	border-radius: 5px;
+	color:#1ea6df;
+	padding:8px 30px ;
+}
+/* line */
+.line
+{
+	border-bottom:1px solid #c3d7e2;
+	position: absolute;
+	height:0;
+	bottom:0;
+	display: block;
+	width:100%;
+	z-index:1;
+}
+/* from */
+
+.input
+{
+	border:1px solid #e6e6e6;
+	border-radius: 2px;
+	padding:0 9px;
+	font-size: 12px;
+	vertical-align: middle;
+	color: #333;
+	height: 36px;
+}
+.input_text:focus
+{
+	border:0 none;
+	outline:0 none;
+}
+select
+{
+	width:160px;
+	height:36px;
+	line-height:30px;
+	border:1px solid #e6e6e6;
+	border-radius: 2px;
+	padding:0 5px;
+	padding:0\9;
+	color:#333;
+}
+
+select:hover
+{
+	border:1px solid #c2c2c2;
+	border-radius: 2px;
+}
+input:focus,
+select:focus
+{
+	box-shadow: 0 0 5px #56b9f0;
+	border-radius: 2px;
+	border:1px solid #56b9f0;
+}
+select option 
+{ 
+	height: 30px; 
+	line-height: 30px; 
+}
+/* img icon */
+.icon
+{
+	width:20px;
+	height:20px;
+	display: inline-block;
+	background:  url(../img/icon.png) no-repeat;
+}
+/* table */
+table {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-color: #ccc;
+}
+/* pop */
+.pop-wrap
+{
+	width:550px;
+	box-shadow: 0 0 5px #222;
+	position: absolute;
+	top:20%;
+	left:50%;
+	margin:0 0 0 -275px;
+	z-index:999;
+	background-color: #fff;
+	border-radius: 3px;
+}
+.pop-title
+{
+	background: #e0e0e0;
+	color:#333;
+	padding:10px 14px;
+	font-weight: bold;
+	overflow: hidden;
+	position: relative;
+	height:38px;
+	border-radius: 3px 3px 0 0;
+}
+

@@ -1,0 +1,54 @@
+/* some reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,table,th,td,button{padding:0;margin:0}
+fieldset,img,button{border:0}
+input{vertical-align:middle}
+ol,ul{list-style:none}
+h1,h2,h3,h4,h5,h6{font-size:100%;text-align:left}
+.clear{ height:0; overflow:hidden;clear:both}
+a{text-decoration:none;outline:none;blr:expression(this.onFocus=this.blur()); color:#1155cc}
+a:hover{text-decoration:none}
+.fl{ float:left}
+.fr{ float:right}
+.clearfix{zoom:1}
+.clearfix:after{content:".";display:block;visibility:hidden;height:0;clear:both}
+body{font-size:12px; color:#585858;font-family:Arial, sans-serif, '宋体'}
+.red{color:#e04e3a}
+table{border-collapse:collapse;border-spacing:0}
+/*main*/
+.main{width:1170px; margin:0 auto;zoom:1}
+.main:after{content:".";display:block;visibility:hidden;height:0;clear:both}
+.leftbar{ width:1000px; float:left}
+.filter{font-size:12px; width:690px; margin:10px auto 10px;}
+.nav{ position:relative;z-index:900}
+.tabs{height:34px; line-height:33px;padding-left:1px; border:1px solid #dcdee1;border-bottom:2px solid #ee7711; border-left:none;/* background:#fbfbfb*/}
+.tabs a{height:34px; line-height:34px; float:left;padding:0 18px 0 19px; margin-left:-1px; border:solid #edeeef; border-width:0 1px;position:relative;z-index:1;color:#585858; position:relative}
+.tabs h1{ float:left; vertical-align:middle}
+.tabs i{ float:left;width:27px; height:16px; margin:9px 0 0 8px; }
+.tabs .tabselect{ margin-top:-1px; background:#ee7711; border-color:#dd5500; border-width:1px 1px 0 1px;color:#fff;z-index:2}
+
+
+
+/*三级分类筛选*/
+.cataItem{ padding:9px 0 157px 17px; border:1px solid #dcdee1; border-top:none}
+.selection li{ width:150px; height:28px; line-height:28px; float:left; font-size:12px}
+.selection a:hover{ color:red}
+.selection .select a{ font-weight:bold; color:#000}
+.selection .selItem{ font-weight:bold; color:#585858}
+.shaixuan{ margin-top:19px; height:26px; }
+.shaixuan input{ float:left; width:214px; height:26px;line-height:26px; padding-left:7px; border:1px solid #c5c6c7; border-bottom-color:#e8e9eb; border-right:none;}
+.shaixuan a{ float:left; width:56px;line-height:26px; border:1px solid #dcdee1; border-bottom-color:#c3c5c7; text-align:center; font-size:12px; color:#585858; font-weight:bold;background-position:0 -256px}
+.keyword{color:#b8b8b8}
+.keyword2{color:#282828}
+#tooltipdiv1{width:221px; background:#fff; font-weight:bold; font-size:12px; margin-top:-2px}
+.tooltip ul{width:221px;border:1px solid #dcdadc; border-top:none}
+.tooltip li{height:24px; line-height:24px;padding:0 8px; cursor:pointer}
+.tooltip li a{ color:#666; font-weight:normal; float:left}
+.tooltip li .tool_r{float:right;color:#a8a8a8;font-weight:normal;}
+.tooltip li.selected a b,.tooltip li.selected a,.tooltip li.selected .tool_r{color:#666}
+.tooltip li.selected,.tag_options li.open_hover{background:#f7f7f7}/
+
+
+.page_break{height:25px;line-height:25px;position:inherit;margin-top:19px;}
+.page_break strong{	font-size:12px;	padding-left:8px;padding-right:8px;	border:1px solid #FB9504;background:#FFFBDE;padding-top:4px;padding-bottom:2px;	margin-left:6px;}
+.page_break a{padding-left:8px;padding-right:8px;border:1px solid #E1E1E1;background:#fff;font-size:12px;padding-top:4px;padding-bottom:2px;color:#07519a;text-decoration:none;	margin-left:6px;}
+.page_break a:hover{padding-left:8px;padding-right:8px;	border:1px solid #FB9504;background:#FFFBDE;}

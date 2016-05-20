@@ -1,0 +1,82 @@
+/**
+ * Copyright 2012, Athena UI Library
+ * MIT Licensed
+ * @ dialog.css
+ * @author imbingdian@gmail.com
+ * @build 2012/12/07
+ */
+#overlay {
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background-color:#fff;
+	filter:alpha(opacity=88);
+	-moz-opacity: 0.88;
+	opacity: 0.88;
+	z-index:10000;
+}
+*html { background:url(img/blank.gif) fixed; }
+*html body { margin:0; height:100%; }
+*html #overlay { position: absolute; left: expression(documentElement.scrollLeft + documentElement.clientWidth - this.offsetWidth); top: expression(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight); }
+
+.ui-dialog {
+	position: absolute;
+	z-index: 10001;
+	left: 50%;
+	top: 0;
+	-webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 4px 16px rgba(0,0,0,.2);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+	background: white;
+	background-clip: padding-box;
+	border: 1px solid #acacac;
+	border: 1px solid gba(0, 0, 0, .333);
+	outline: 0;
+	overflow: hidden;
+	text-align:left;
+}
+.ui-dialog-hd {
+	height: 60px;
+	line-height: 60px;
+	padding: 0 20px;
+	font-size: 18px;
+	border-bottom: 1px #e4e4e4 solid;
+	font-weight: bold;
+}
+a.ui-dialog-close {
+	display: block;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	background:#fff url(img/dialog_close.png) no-repeat 50% 50%;
+	overflow: hidden;
+}
+a.ui-dialog-close:hover {
+	background: #f9f9f9 url(img/dialog_close_hover.png) no-repeat 50% 50%; 
+}
+
+.ui-dialog-noreg {
+    padding-left: 33px;
+    padding-top: 20px;
+    border-top: 1px #ccc solid;
+}
+.ui-dialog-alreg {
+    padding-left: 33px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px #ccc solid;
+}
+.ui-dialog-notice {
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px #ccc solid;
+	background: #fffbcc;
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 5px;
+}
