@@ -10,7 +10,7 @@
 	<meta content="" name="description" />
 	<meta content="" name="author" />
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
-	<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
+	<link href="{{asset('login/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
 	<link href="{{asset('login/css/bootstrap-responsive.min.css')}}" rel="stylesheet" type="text/css"/>
 	<link href="{{asset('login/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"/>
 	<link href="{{asset('login/css/style-metro.css')}}" rel="stylesheet" type="text/css"/>
