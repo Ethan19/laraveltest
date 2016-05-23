@@ -36,8 +36,7 @@ class Controller extends BaseController{
 	}
 
     public function index(){
-    	$a = ["name"=>"ethan","sex"=>"男"];
-    	return view('admin.index',$a);
+    	return view('admin.index');
     }
 
     private function checkChildMneu($menuId){

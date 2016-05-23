@@ -28,8 +28,11 @@
 
 
 //后台路由
+//--登录
+Route::get("/","Admin\LoginController@index");
+//--后台首页
 Route::get("/admin","Admin\Controller@index");
-Route::get("/","Admin\Controller@index");
+
 Route::get("admin/menu","Admin\MenuController@index");
 
 
