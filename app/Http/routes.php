@@ -20,18 +20,17 @@
 // 	]);
 // Route::get("foo","Photos\AdminController@method");
 // Route::get("/","Home\Controller@index");
-
-
-//后台路由
-Route::get("/admin/","Admin\Controller@index");
-Route::get("/",function(){
-	return 11111111;
-});
 // Route::get("admin/{id}",function($id){
 // 	return $id;
 // });
-Route::get("admin/menu","Admin\MenuController@index");
 //Route::get("foo",['uses'=>'fooController@method','as'=>'name']);
 // Route::get("profile",['middleware'=>'auth','uses'=>'UserController@showProfile']);
+
+
+//后台路由
+Route::get("/admin","Admin\Controller@index");
+Route::get("/","Admin\Controller@index");
+Route::get("admin/menu","Admin\MenuController@index");
+
 
 

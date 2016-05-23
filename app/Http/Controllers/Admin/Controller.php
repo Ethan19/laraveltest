@@ -31,7 +31,6 @@ class Controller extends BaseController{
 			}
 	        $str .= "</li>";
 		}
-		$menu = "<p style='color:red'>nihao</p>";
 		view()->share("menu",$str);//菜单
 		view()->share('title', "laravel站点");
 	}
@@ -46,7 +45,7 @@ class Controller extends BaseController{
     	$child = DB::select("select * from menu where parent_id={$menuId} and mark=1");
     	foreach ($child as $val) {
 	    	$childstr .="<ul class='nav nav-second-level'>";
-	    	$childstr .="<li><a href='".$val->controller."'>".$val->name."</a></li>";
+	    	$childstr .="<li><a href='/admin/".$val->controller."'>".$val->name."</a></li>";
 	    	$childstr .="</ul>";
     	}
     	return $childstr;
