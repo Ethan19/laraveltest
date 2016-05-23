@@ -10,16 +10,16 @@
 	<meta content="" name="description" />
 	<meta content="" name="author" />
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
-	<link href="{{asset(css/bootstrap.min.css)'}}" rel="stylesheet" type="text/css"/>
-	<link href="{{asset('login/css/bootstrap-responsive.min.css)'}}" rel="stylesheet" type="text/css"/>
-	<link href="{{asset('login/css/font-awesome.min.css)'}}" rel="stylesheet" type="text/css"/>
-	<link href="{{asset('login/css/style-metro.css)'}}" rel="stylesheet" type="text/css"/>
-	<link href="{{asset('login/css/style.css)'}}" rel="stylesheet" type="text/css"/>
-	<link href="{{asset('login/css/style-responsive.cs)'}}" rel="stylesheet" type="text/css"/>
-	<link href="{{asset('login/css/default.css" rel="stylesheet)'}}" type="text/css" id="style_color"/>
-	<link href="{{asset('login/css/uniform.default.css)'}}" rel="stylesheet" type="text/css"/>
-	<link href="{{asset('login/css/login.css)'}}" rel="stylesheet" type="text/css"/>
-	<link rel="shortcut icon" href="{{asset('login/image/favicon.ico)'}}" />
+	<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
+	<link href="{{asset('login/css/bootstrap-responsive.min.css')}}" rel="stylesheet" type="text/css"/>
+	<link href="{{asset('login/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"/>
+	<link href="{{asset('login/css/style-metro.css')}}" rel="stylesheet" type="text/css"/>
+	<link href="{{asset('login/css/style.css')}}" rel="stylesheet" type="text/css"/>
+	<link href="{{asset('login/css/style-responsive.cs')}}" rel="stylesheet" type="text/css"/>
+	<link href="{{asset('login/css/default.css" rel="stylesheet')}}" type="text/css" id="style_color"/>
+	<link href="{{asset('login/css/uniform.default.css')}}" rel="stylesheet" type="text/css"/>
+	<link href="{{asset('login/css/login.css')}}" rel="stylesheet" type="text/css"/>
+	<link rel="shortcut icon" href="{{asset('login/image/favicon.ico')}}" />
 </head>
 <body class="login">
 	<div class="logo">
@@ -63,22 +63,22 @@
 	<div class="copyright">
 		<!-- 2013 &copy; Metronic. Admin Dashboard Template. -->
 	</div>
-	<script src="{{asset('login/js/jquery-1.10.1.min.js)'}}" type="text/javascript"></script>
-	<script src="{{asset('login/js/jquery-migrate-1.2.1.min.js)'}}" type="text/javascript"></script>
+	<script src="{{asset('login/js/jquery-1.10.1.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('login/js/jquery-migrate-1.2.1.min.js')}}" type="text/javascript"></script>
 	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-	<script src="{{asset('login/js/jquery-ui-1.10.1.custom.min.js)'}}" type="text/javascript"></script>      
-	<script src="{{asset('login/js/bootstrap.min.js)'}}" type="text/javascript"></script>
+	<script src="{{asset('login/js/jquery-ui-1.10.1.custom.min.js')}}" type="text/javascript"></script>      
+	<script src="{{asset('login/js/bootstrap.min.js')}}" type="text/javascript"></script>
 	<!--[if lt IE 9]>
 	<script src="media/js/excanvas.min.js"></script>
 	<script src="media/js/respond.min.js"></script>  
 	<![endif]-->   
-	<script src="{{asset('login/js/jquery.slimscroll.min.js)'}}" type="text/javascript"></script>
-	<script src="{{asset('login/js/jquery.blockui.min.js)'}}" type="text/javascript"></script>  
-	<script src="{{asset('login/js/jquery.cookie.min.js)'}}" type="text/javascript"></script>
-	<script src="{{asset('login/js/jquery.uniform.min.js)'}}" type="text/javascript" ></script>
-	<script src="{{asset('login/js/jquery.validate.min.js)'}}" type="text/javascript"></script>
-	<script src="{{asset('login/js/app.js)'}}" type="text/javascript"></script>
-	<script src="{{asset('login/js/login.js)'}}" type="text/javascript"></script>      
+	<script src="{{asset('login/js/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('login/js/jquery.blockui.min.js')}}" type="text/javascript"></script>  
+	<script src="{{asset('login/js/jquery.cookie.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('login/js/jquery.uniform.min.js')}}" type="text/javascript" ></script>
+	<script src="{{asset('login/js/jquery.validate.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('login/js/app.js')}}" type="text/javascript"></script>
+	<script src="{{asset('login/js/login.js')}}" type="text/javascript"></script>      
 	<script>
 
 		// $(document).on('click', '#submit', function(event) {
