@@ -15,7 +15,7 @@
 	<link href="{{asset('login/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"/>
 	<link href="{{asset('login/css/style-metro.css')}}" rel="stylesheet" type="text/css"/>
 	<link href="{{asset('login/css/style.css')}}" rel="stylesheet" type="text/css"/>
-	<link href="{{asset('login/css/style-responsive.cs')}}" rel="stylesheet" type="text/css"/>
+	<link href="{{asset('login/css/style-responsive.css')}}" rel="stylesheet" type="text/css"/>
 	<link href="{{asset('login/css/default.css" rel="stylesheet')}}" type="text/css" id="style_color"/>
 	<link href="{{asset('login/css/uniform.default.css')}}" rel="stylesheet" type="text/css"/>
 	<link href="{{asset('login/css/login.css')}}" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,9 @@
 	<div class="logo">
 	</div>
 	<div class="content">
-		<form class="form-vertical login-form" action="/admin/login/login.html" method="post" id="form">
+		<form class="form-vertical login-form" action="/admin/login/sign" method="post" id="form">
+		<input type="hidden" name="flag" value="login"/>
+		{{csrf_field()}}
 			<h3 class="form-title">账号</h3>
 			<div class="alert alert-error hide">
 				<button class="close" data-dismiss="alert"></button>
@@ -37,7 +39,7 @@
 				<div class="controls">
 					<div class="input-icon left">
 						<i class="icon-user"></i>
-						<input class="m-wrap placeholder-no-fix" type="text" placeholder="用户名" name="username" required="required"/>
+						<input class="m-wrap placeholder-no-fix" type="text" placeholder="用户名" name="username" required="required" />
 					</div>
 				</div>
 			</div>
@@ -52,12 +54,17 @@
 			</div>
 			<div class="form-actions">
 				<label class="checkbox">
-				<input type="checkbox" name="remember" value="1"/> Remember me
+				<input type="checkbox" name="remember" /> Remember me
 				</label>
 				<button type="submit" class="btn green pull-right">
 				登录 <i class="m-icon-swapright m-icon-white"></i>
 				</button>            
 			</div>
+		@if (session('states'))
+	    <div class="alert alert-success">
+	        {{ session('states') }}
+	    </div>
+		@endif
 		</form>
 	</div>
 	<div class="copyright">

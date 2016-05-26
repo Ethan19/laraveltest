@@ -15,7 +15,6 @@ class AuthMiddle
      */
     public function handle($request, Closure $next)
     {
-        var_dump($request);die;
         return $next($request);
     }
 }

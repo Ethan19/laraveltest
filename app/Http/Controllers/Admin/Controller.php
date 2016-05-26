@@ -25,7 +25,7 @@ class Controller extends BaseController{
 			$str .= "<a href='javascript:void()'><i class='fa fa-dashboard'></i>".$value->name;
 			if((int)$value->parent_id == 0){
 				$str .= "<span class='fa arrow'></span></a>";
-				$str .= $this->checkChildMneu($value->id);
+				$str .= $this->checkChildMenu($value->id);
 			}else{
 				$str .="</a>";
 			}
@@ -39,7 +39,7 @@ class Controller extends BaseController{
     	return view('admin.index');
     }
 
-    private function checkChildMneu($menuId){
+    private function checkChildMenu($menuId){
     	$childstr = '';
     	$child = DB::select("select * from menu where parent_id={$menuId} and mark=1");
     	foreach ($child as $val) {

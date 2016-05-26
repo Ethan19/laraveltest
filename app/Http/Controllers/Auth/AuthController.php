@@ -28,7 +28,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/admin';
 
     /**
      * Create a new authentication controller instance.
@@ -49,8 +49,8 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'username' => 'required|max:255',
+            //'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
         ]);
     }
@@ -68,5 +68,26 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    /**
+     * [getLogin 登录页面]
+     * @author 1023
+     * @date          2016-05-25
+     * @return [type] [description]
+     */
+    public function getLogin(){
+        return view('login.index');
+    }
+
+
+    /**
+     * [postLogin 登录动作]
+     * @author 1023
+     * @date          2016-05-25
+     * @return [type] [description]
+     */
+    public function postLogin(){
+
     }
 }
