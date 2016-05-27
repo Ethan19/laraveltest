@@ -6,6 +6,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Contracts\View\Factory;
 use DB;
 use Request;
+use Auth;
 /**
  * 后台基类
  */
@@ -36,6 +37,10 @@ class Controller extends BaseController{
 	}
 
     public function index(){
+    	if (Auth::check())
+			{
+			    // The user is logged in...
+			}
     	return view('admin.index');
     }
 

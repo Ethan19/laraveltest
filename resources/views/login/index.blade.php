@@ -25,7 +25,7 @@
 	<div class="logo">
 	</div>
 	<div class="content">
-		<form class="form-vertical login-form" action="/admin/login/sign" method="post" id="form">
+		<form class="form-vertical login-form" action="/authlogin" method="post" id="form">
 		<input type="hidden" name="flag" value="login"/>
 		{{csrf_field()}}
 			<h3 class="form-title">账号</h3>
@@ -39,7 +39,7 @@
 				<div class="controls">
 					<div class="input-icon left">
 						<i class="icon-user"></i>
-						<input class="m-wrap placeholder-no-fix" type="text" placeholder="用户名" name="username" required="required" />
+						<input class="m-wrap placeholder-no-fix" type="text" placeholder="用户名" name="username"  />
 					</div>
 				</div>
 			</div>
@@ -60,9 +60,9 @@
 				登录 <i class="m-icon-swapright m-icon-white"></i>
 				</button>            
 			</div>
-		@if (session('states'))
+		@if (session('status'))
 	    <div class="alert alert-success">
-	        {{ session('states') }}
+	        {{ session('status') }}
 	    </div>
 		@endif
 		</form>

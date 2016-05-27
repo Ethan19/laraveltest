@@ -42,8 +42,10 @@ Route::post("admin/login/sign",array("middleware"=>"login",function(){}));
 // });
 
 //登录路由
+Route::post('/authlogin', 'Auth\AuthController@postLogin');
 Route::get('/', 'Auth\AuthController@getLogin');
-Route::post('/', 'Auth\AuthController@postLogin');
+//Route::get('/', array("middleware"=>"auth",function(){}));
+Route::post('/auth/register', 'Auth\AuthController@create');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 

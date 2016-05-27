@@ -1,12 +1,15 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
-use App\User;
+use App\Http\Controllers\Admin\UserController as User;
+// use App\User;
 use Validator;
-use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
-use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+// use App\Http\Controllers\Controller;
+// use Illuminate\Foundation\Auth\ThrottlesLogins;
+// use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+// use auth;
+use Auth;
+use Illuminate\Routing\Controller;
 
 class AuthController extends Controller
 {
@@ -21,14 +24,14 @@ class AuthController extends Controller
     |
     */
 
-    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+    // use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
     /**
      * Where to redirect users after login / registration.
      *
      * @var string
      */
-    protected $redirectTo = '/admin';
+     protected $redirectTo = '/';
 
     /**
      * Create a new authentication controller instance.
@@ -37,7 +40,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+        //$this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
 
     /**
@@ -46,13 +49,19 @@ class AuthController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+    public function validator(array $data)
     {
-        return Validator::make($data, [
-            'username' => 'required|max:255',
-            //'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
-        ]);
+        $errorMsg = '';
+        $validator = Validator::make($data, array('username'=>'required|max:225','password' => 'required|min:6'));
+        if($validator->fails()){
+            if($validator->messages()->has("username")){ 
+                $errorMsg  = $validator->messages()->first("username");
+            }elseif($validator->messages()->has("password")){  
+                $errorMsg  = $validator->messages()->first("password");             
+            }
+        }
+        return $errorMsg?$errorMsg:false;
+
     }
 
     /**
@@ -61,13 +70,23 @@ class AuthController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create(array $data)
+    protected function create()
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        $data['username'] = $_POST['username'];
+        $data['password'] = $_POST['password'];
+        $msg = $this->validator($data);
+        if($msg){
+            return redirect("/")->with("status",$msg);
+        }else{
+            $res = User::create($_POST);
+            if($res === TRUE){
+                $msg = $_POST['username']."注册成功";
+            }elseif((int)$res < 0){
+                $msg = $_POST['username']."注册失败，用户名已经存在";
+            }
+            return  redirect("/")->with("status",$msg);
+        }
+
     }
 
     /**
@@ -88,6 +107,12 @@ class AuthController extends Controller
      * @return [type] [description]
      */
     public function postLogin(){
-
+        $res = Auth::attempt(array('username' => $_POST['username'], 'password' => $_POST['password']));
+        if ($res){
+            // 认证通过...
+            return redirect()->intended('/admin');
+        }else{
+            return redirect('/');
+        }
     }
 }
