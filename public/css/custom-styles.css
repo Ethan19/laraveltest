@@ -2,7 +2,7 @@
     COMMON  STYLES    
 ------------------------------------------------*/
 body {
-    font-family: 'Open Sans', sans-serif;
+/*    font-family: 'Open Sans', sans-serif;*/
     background: #323232;
 }
 
@@ -16,6 +16,7 @@ body {
     background: #EDEDED;
 }
 #page-inner {
+    font-size: 12px;
     width:100%;
     margin:10px 20px 10px 0px;
     background-color:transparent;

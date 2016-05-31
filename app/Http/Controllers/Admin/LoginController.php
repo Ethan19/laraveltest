@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 
-use App\Http\Requests;
-// use App\Http\Controllers\Controller;
+// use App\Http\Requests;
+use App\Http\Controllers\Admin\Controller;
 
 class LoginController extends Controller
 {
@@ -25,9 +25,6 @@ class LoginController extends Controller
 
 
     public function sign(){
-    	var_dump($_POST);die;
-
-
     }
 
 

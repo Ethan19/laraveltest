@@ -1,190 +1,100 @@
-@include('admin.top')
-
-    <div id="wrapper">
-        <nav class="navbar navbar-default top-navbar" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><strong>Marvel</strong></a>
-				
-		<div id="sideNav" href=""><i class="fa fa-caret-right"></i></div>
-            </div>
-
-            <ul class="nav navbar-top-links navbar-right">
-
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-        </nav>
-        <!--/. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-               {!!$menu!!}
-<!-- 
-                    <li>
-                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="ui-elements.html"><i class="fa fa-desktop"></i> UI Elements</a>
-                    </li>
-					<li>
-                        <a href="chart.html"><i class="fa fa-bar-chart-o"></i> Charts</a>
-                    </li>
-                    <li>
-                        <a href="tab-panel.html"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
-                    </li>
-                    
-                    <li>
-                        <a href="table.html"><i class="fa fa-table"></i> Responsive Tables</a>
-                    </li>
-                    <li>
-                        <a href="form.html"><i class="fa fa-edit"></i> Forms </a>
-                    </li>
-
-
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="empty.html"><i class="fa fa-fw fa-file"></i> Empty Page</a>
-                    </li> -->
-                </ul>
-
-            </div>
-
-        </nav>
-        <!-- /. NAV SIDE  -->
-      
-		<div id="page-wrapper">
-		  <div class="header"> 
-                        <h1 class="page-header">
-                            Dashboard <small>Welcome John Doe</small>
-                        </h1>
-						<ol class="breadcrumb">
-					  <li><a href="#">Home</a></li>
-					  <li><a href="#">Dashboard</a></li>
-					  <li class="active">Data</li>
-					</ol> 
-									
-		</div>
-            <div id="page-inner">
-
-                <!-- /. ROW  -->
-	
-		<div class="row">
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>Profit</h4>
-						<div class="easypiechart" id="easypiechart-blue" data-percent="82" ><span class="percent">82%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>Sales</h4>
-						<div class="easypiechart" id="easypiechart-orange" data-percent="55" ><span class="percent">55%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>Customers</h4>
-						<div class="easypiechart" id="easypiechart-teal" data-percent="84" ><span class="percent">84%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>No. of Visits</h4>
-						<div class="easypiechart" id="easypiechart-red" data-percent="46" ><span class="percent">46%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/.row-->
+@include('public.top')
+        <div id="page-inner">
+    		<div class="row">
+    			<div class="col-xs-6 col-md-3">
+    				<div class="panel panel-default">
+    					<div class="panel-body easypiechart-panel">
+    						<h4>Profit</h4>
+    						<div class="easypiechart" id="easypiechart-blue" data-percent="82" ><span class="percent">82%</span>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-xs-6 col-md-3">
+    				<div class="panel panel-default">
+    					<div class="panel-body easypiechart-panel">
+    						<h4>Sales</h4>
+    						<div class="easypiechart" id="easypiechart-orange" data-percent="55" ><span class="percent">55%</span>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-xs-6 col-md-3">
+    				<div class="panel panel-default">
+    					<div class="panel-body easypiechart-panel">
+    						<h4>Customers</h4>
+    						<div class="easypiechart" id="easypiechart-teal" data-percent="84" ><span class="percent">84%</span>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-xs-6 col-md-3">
+    				<div class="panel panel-default">
+    					<div class="panel-body easypiechart-panel">
+    						<h4>No. of Visits</h4>
+    						<div class="easypiechart" id="easypiechart-red" data-percent="46" ><span class="percent">46%</span>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
 			
 		
-                <div class="row">
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder blue">
-                            <div class="panel-left pull-left blue">
-                                <i class="fa fa-eye fa-5x"></i>
-                                
-                            </div>
-                            <div class="panel-right">
-								<h3>16,150</h3>
-                               <strong> Daily Visits</strong>
-                            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="panel panel-primary text-center no-boder blue">
+                        <div class="panel-left pull-left blue">
+                            <i class="fa fa-eye fa-5x"></i>
+                            
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder blue">
-                              <div class="panel-left pull-left blue">
-                                <i class="fa fa-shopping-cart fa-5x"></i>
-								</div>
-                                
-                            <div class="panel-right">
-							<h3>25,550 </h3>
-                               <strong> Sales</strong>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder blue">
-                            <div class="panel-left pull-left blue">
-                                <i class="fa fa fa-comments fa-5x"></i>
-                               
-                            </div>
-                            <div class="panel-right">
-							 <h3>11,225 </h3>
-                               <strong> Comments </strong>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder blue">
-                            <div class="panel-left pull-left blue">
-                                <i class="fa fa-users fa-5x"></i>
-                                
-                            </div>
-                            <div class="panel-right">
-							<h3>72,525 </h3>
-                             <strong>No. of Visits</strong>
-
-                            </div>
+                        <div class="panel-right">
+							<h3>16,150</h3>
+                           <strong> Daily Visits</strong>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="panel panel-primary text-center no-boder blue">
+                          <div class="panel-left pull-left blue">
+                            <i class="fa fa-shopping-cart fa-5x"></i>
+							</div>
+                            
+                        <div class="panel-right">
+						<h3>25,550 </h3>
+                           <strong> Sales</strong>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="panel panel-primary text-center no-boder blue">
+                        <div class="panel-left pull-left blue">
+                            <i class="fa fa fa-comments fa-5x"></i>
+                           
+                        </div>
+                        <div class="panel-right">
+						 <h3>11,225 </h3>
+                           <strong> Comments </strong>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="panel panel-primary text-center no-boder blue">
+                        <div class="panel-left pull-left blue">
+                            <i class="fa fa-users fa-5x"></i>
+                            
+                        </div>
+                        <div class="panel-right">
+						<h3>72,525 </h3>
+                         <strong>No. of Visits</strong>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 				
-				<div class="row">
+			<div class="row">
 				<div class="col-md-5">
 						<div class="panel panel-default">
 						<div class="panel-heading">
@@ -194,21 +104,19 @@
 							<div id="morris-line-chart"></div>
 						</div>						
 					</div>   
-					</div>		
-					
-						<div class="col-md-7">
+				</div>
+				<div class="col-md-7">
 					<div class="panel panel-default">
-					<div class="panel-heading">
-                                Bar Chart Example
-                            </div>
-                            <div class="panel-body">
-                                <div id="morris-bar-chart"></div>
-                            </div>
+					   <div class="panel-heading">
+                            Bar Chart Example
+                        </div>
+                        <div class="panel-body">
+                            <div id="morris-bar-chart"></div>
+                        </div>
 						
 					</div>  
-					</div>
-					
-				</div> 
+				</div>
+			</div> 
 			 
 				
 				
@@ -217,7 +125,7 @@
                         <div class="panel panel-default">                            
 							<div class="panel-heading">
 							Area Chart
-						</div>
+                            </div>
 						<div class="panel-body">
 							<div id="morris-area-chart"></div>
 						</div>
@@ -361,7 +269,5 @@
             </div>
             <!-- /. PAGE INNER  -->
         </div>
-        <!-- /. PAGE WRAPPER  -->
-    </div>
-@include('admin.footer')
+@include('public.footer')
 

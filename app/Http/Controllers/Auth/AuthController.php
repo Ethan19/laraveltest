@@ -96,6 +96,10 @@ class AuthController extends Controller
      * @return [type] [description]
      */
     public function getLogin(){
+        //dd($GLOBALS['app']);
+        if(Auth::check()){
+            return redirect("/admin/index/set");
+        }
         return view('login.index');
     }
 
@@ -110,9 +114,16 @@ class AuthController extends Controller
         $res = Auth::attempt(array('username' => $_POST['username'], 'password' => $_POST['password']));
         if ($res){
             // 认证通过...
-            return redirect()->intended('/admin');
+            return redirect()->intended('/admin/index/set');
         }else{
             return redirect('/');
         }
+    }
+
+    public function getLogout(){
+        if(Auth::check()){
+            Auth::logout();
+        }
+        return redirect('/');
     }
 }

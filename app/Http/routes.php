@@ -46,13 +46,24 @@ Route::post('/authlogin', 'Auth\AuthController@postLogin');
 Route::get('/', 'Auth\AuthController@getLogin');
 //Route::get('/', array("middleware"=>"auth",function(){}));
 Route::post('/auth/register', 'Auth\AuthController@create');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
+Route::get('/auth/logout', 'Auth\AuthController@getLogout');
 
 
 //--后台首页
+//规则Route::get($a,$b);
+/**
+ * 1.$a 全部小写命名，命令规则和后台数据库保持一致
+ */
 Route::get("/admin","Admin\Controller@index");
 
+
+Route::get("/admin/index/set","Admin\IndexController@set");
+/*菜单模块*/
 Route::get("/admin/menu","Admin\MenuController@index");
+Route::get("/admin/menu/menulist","Admin\MenuController@menulist");
+Route::get("/admin/menu/edit/{id}",'Admin\MenuController@edit');
+Route::post("/admin/menu/editinfo",'Admin\MenuController@editinfo');
+
 
 
 

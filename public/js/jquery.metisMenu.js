@@ -18,6 +18,7 @@
 
             var $this = $(this.element),
                 $toggle = this.settings.toggle;
+                console.log($toggle);
 
             $this.find('li.active').has('ul').children('ul').addClass('collapse in');
             $this.find('li').not('.active').has('ul').children('ul').addClass('collapse');
