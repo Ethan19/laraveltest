@@ -63,6 +63,9 @@ Route::get("/admin/menu","Admin\MenuController@index");
 Route::get("/admin/menu/menulist","Admin\MenuController@menulist");
 Route::get("/admin/menu/edit/{id}",'Admin\MenuController@edit');
 Route::post("/admin/menu/editinfo",'Admin\MenuController@editinfo');
+Route::get("/admin/menu/add",'Admin\MenuController@add');
+Route::post("/admin/menu/addinfo",'Admin\MenuController@addinfo');
+Route::get("/admin/menu/delete",'Admin\MenuController@delete');
 
 
 

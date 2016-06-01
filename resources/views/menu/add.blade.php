@@ -12,13 +12,12 @@
             {{ session('fails') }}
         </div>
         @endif -->
-                                    <form role="form" action="/admin/menu/editinfo" method="post">
-                                        <input type="hidden" name="id" value="{{$info->id}}" />
+                                    <form role="form" action="/admin/menu/addinfo" method="post">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
                                         <div class="form-group">
                                             <label><span style="color:red">*</span>菜单名称</label>
-                                            <input type="text" class="form-control" name="name" value="@if($info->name) {{$info->name}} @endif"/>
+                                            <input type="text" class="form-control" name="name" value=""/>
                                         </div>
                                          @if($errors->first('name'))
                                         <div class="alert alert-danger">
@@ -27,7 +26,7 @@
                                          @endif
                                         <div class="form-group">
                                             <label><span style="color:red">*</span>CONTROLLER</label>
-                                            <input type="text" name="controller" class="form-control" value="{{$info->controller}}" />
+                                            <input type="text" name="controller" class="form-control" value="" />
                                         </div>
                                          @if($errors->first('controller'))
                                         <div class="alert alert-danger">
@@ -36,7 +35,7 @@
                                          @endif
                                         <div class="form-group">
                                             <label>ACTION</label>
-                                            <input type="text" name="action" class="form-control" value="{{$info->action}}" />
+                                            <input type="text" name="action" class="form-control" value="" />
                                         </div>
                                          @if($errors->first('action'))
                                         <div class="alert alert-danger">
@@ -45,14 +44,14 @@
                                          @endif
                                         <div class="form-group">
                                             <label>图标</label>
-                                            <input type="text" name="icon" class="form-control" value="{{$info->icon}}">
+                                            <input type="text" name="icon" class="form-control" value="">
                                         </div>
                                         <div class="form-group">
                                             <label>父级菜单</label>
                                             <select class="form-control" name="parent_id">
                                                 <option value="0">无父级</option>
                                                 @foreach($list as $val)
-                                                <option value="{{$val->id}}" <?php if($info->parent_id == $val->id){echo "selected='selected'";}?> >{{$val->name}}</option>
+                                                <option value="{{$val->id}}" >{{$val->name}}</option>
                                                 @endforeach
                                             </select>
                                         </div>

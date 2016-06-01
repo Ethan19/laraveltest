@@ -45,7 +45,7 @@ class Controller extends BaseController{
 
 		foreach ($result as $key => $value) {
 			$str .= "<li>";
-			$str .= "<a href='javascript:void()'><i class='fa fa-edit'></i>".$value->name;
+			$str .= "<a href='javascript:void()'><i class='fa ".$value->icon."'></i>".$value->name;
 			if((int)$value->parent_id == 0){
 				$str .= "<span class='fa arrow'></span></a>";
 				$str .= $this->checkChildMenu($value->id);

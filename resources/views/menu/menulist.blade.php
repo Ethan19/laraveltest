@@ -1,12 +1,28 @@
 @include("public.top")
+<style type="text/css">
+    .point{
+        cursor:pointer;
+    }
+
+</style>
 		<div id="page-inner"> 
             <div class="row">
                 <div class="col-md-12">
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                        	菜单列表
+                        	菜单列表 <a href="/admin/menu/add" class="btn btn-primary">新增菜单</a>
                         </div>
+                            @if (session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                            @endif
+                            @if (session('fails'))
+                            <div class="alert alert-danger">
+                                {{ session('fails') }}
+                            </div>
+                            @endif
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
@@ -33,8 +49,8 @@
                                             <td class="text-left"><?php if($menu->parent_id == 0){ }else{ echo $menu->parent_id;}?></td>
                                             <td class="text-left">{{$menu->icon}}</td>
                                             <td class="text-left">{{date("Y-m-d H:i:s",$menu->add_time)}}</td>
-                                            <td class="text-center fa fa-edit edit" data="{{$menu->id}}"></td>
-                                            <td class="text-center fa fa-trash-o delete" data="{{$menu->id}}"></td>
+                                            <td class="text-center fa fa-edit edit point" data="{{$menu->id}}"></td>
+                                            <td class="text-center fa fa-trash-o delete point" data="{{$menu->id}}"></td>
                                         </tr>
                                     @endforeach
                                     </tbody>
@@ -59,12 +75,22 @@ $(document).on('click', '.edit', function() {
 
 $(document).on('click', '.delete', function() {
     id = $(this).attr('data');
+    $this = $(this);
+    $('.alert').remove();
+    // console.log(id);return false;
     $.ajax({
         url: '/admin/menu/delete',
-        type: 'default GET (Other values: POST)',
+        type: 'get',
         dataType: 'json',
         data: {id: id},
         success:function(data){
+            if(data.status=='success'){
+                $('.panel-heading').after("<div class='alert alert-success'>刪除成功</div>");
+            }else{
+                $('.panel-heading').after("<div class='alert alert-danger'>刪除失敗</div>");                
+            }
+            $this.parent().remove();
+
 
         }
     })
